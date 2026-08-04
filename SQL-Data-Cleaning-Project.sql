@@ -58,9 +58,6 @@ delete  from duplicate_cte where row_num>1;
 
 select row_number() over() as "serial No." , company,location,country from layoff_2;
 
-select name,budget,year from movies m1 where budget > (select avg(budget) from movies m2
-where m2.year = m1.year)
-limit 30;
 
 
 
